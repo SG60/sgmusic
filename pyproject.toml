@@ -5,7 +5,8 @@ description = ""
 authors = ["Sam Greening <samjg60@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = ">=3.9"
+sympy = "^1.8"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
