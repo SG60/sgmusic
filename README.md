@@ -1,3 +1,5 @@
 # sgmusic Python Library
 
-Using poetry
+Using poetry, mypy, isort, black.
+
+Pytest for testing.
