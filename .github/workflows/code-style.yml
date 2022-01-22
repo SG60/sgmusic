@@ -60,7 +60,8 @@ jobs:
         run: poetry install --remove-untracked
 
       - name: Install black, isort, flake8
-        run: pip install black isort flake8
+        run: pip install black isort
+             | poetry run pip install flake8
 
       - name: Black
         run: poetry run black . --check
