@@ -3,6 +3,8 @@ name = "sgmusic"
 version = "0.1.0"
 description = ""
 authors = ["Sam Greening <samjg60@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/SG60/sgmusic"
 
 [tool.poetry.dependencies]
 python = ">=3.9"
