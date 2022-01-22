@@ -63,11 +63,11 @@ jobs:
         run: pip install black isort flake8
 
       - name: Black
-        run: poetry run python -m black . --check
+        run: poetry run black . --check
         if: ${{ always() }}
       - name: ISort
         run: poetry run isort . --check --diff
         if: ${{ always() }}
       - name: Flake8
-        run: poetry run flake8 ncal
+        run: poetry run flake8 ./
         if: ${{ always() }}
