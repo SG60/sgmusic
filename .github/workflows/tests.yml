@@ -66,8 +66,8 @@ jobs:
       - name: Install dependencies
         run: poetry install --remove-untracked
 
-      - name: Install pytest github plugin
-        run: poetry run pip install pytest-github-actions-annotate-failures
+      - name: Install pytest github plugin, pytest and pytest-cov
+        run: poetry run pip install pytest-github-actions-annotate-failures pytest pytest-cov
 
       - name: Test with pytest
         run: |
