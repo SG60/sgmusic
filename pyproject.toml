@@ -7,12 +7,13 @@ readme = "README.md"
 repository = "https://github.com/SG60/sgmusic"
 
 [tool.poetry.dependencies]
-python = ">=3.9"
+python = ">=3.9,<4"
 sympy = "^1.9"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6"
 mypy = "^0.931"
+hypothesis = {extras = ["cli"], version = "^6.36.0"}
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

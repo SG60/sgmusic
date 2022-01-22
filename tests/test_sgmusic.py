@@ -1,6 +1,9 @@
 from sympy import S, symbols  # type: ignore
+import sympy  # type: ignore
+from hypothesis import given, strategies as st
+import hypothesis
 
-from sgmusic import Section, __version__, separatetempolist
+from sgmusic import Section, __version__, separatetempolist, ramp
 
 
 def test_version():
@@ -24,3 +27,24 @@ def test_Section():
     assert s2.name == "middle"
     expression = s1.tempo + t1 * s2.tempo
     assert expression.subs({t: 0, t1: 5}) == 5 * t2
+
+
+@given(a=st.integers(10), b=st.integers(10), c=st.integers(10), d=st.decimals(10, 1000))
+def test_ramp(a, b, c, d):
+    # hypothesis.assume(not (a == b == c == d))
+    hypothesis.assume(all((a, b, c, d)))
+    s, m, n, r = symbols("s m n r")  # type: ignore
+    ramp_eq = sympy.Eq(ramp(a, b, c, s), d).doit()
+    try:
+        end_beat = sympy.solveset(ramp_eq, s).args[0]
+    except IndexError:
+        end_beat = None
+    try:
+        end_beat_2 = (
+            sympy.solveset(sympy.Eq(ramp(m, n, r, s), d).doit(), s)
+            .args[0]
+            .subs([(m, a), (n, b), (r, c)])
+        )
+    except IndexError:
+        end_beat_2 = None
+    assert end_beat == end_beat_2
