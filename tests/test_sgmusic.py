@@ -1,5 +1,6 @@
-from sgmusic import __version__, separatetempolist, Section
-from sympy import symbols, S
+from sympy import S, symbols  # type: ignore
+
+from sgmusic import Section, __version__, separatetempolist
 
 
 def test_version():
@@ -7,7 +8,7 @@ def test_version():
 
 
 def test_tempolist():
-    t, t1, t2 = symbols("t:3")
+    t, t1, t2 = symbols("t:3")  # type: ignore
     tempolist_combined = [(t, "start"), t1, (t2, "somewhere")]
     tempolist, sections = separatetempolist(tempolist_combined)
     print(f"tempolist: {tempolist}", f"sections: {sections}")
@@ -15,7 +16,7 @@ def test_tempolist():
 
 
 def test_Section():
-    t, t1, t2 = symbols("t:3")
+    t, t1, t2 = symbols("t:3")  # type: ignore
     s1 = Section(t, "start")
     s2 = Section(S("t2"))
     s2.name = "middle"

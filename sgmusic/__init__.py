@@ -2,8 +2,10 @@ __version__ = "0.1.0"
 
 from bisect import bisect_left
 from collections.abc import Iterable
-from sympy import Integral, symbols, S, Symbol, Expr
 from dataclasses import dataclass
+
+from sympy import Expr, Integral, S, Symbol, symbols  # type: ignore
+
 
 # Tool for custom rounding
 class CustomRound:
