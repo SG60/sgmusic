@@ -9,9 +9,9 @@ on:
 
 jobs:
   test:
-    uses: ./.github/workflows/tests.yml@main
+    uses: ./.github/workflows/tests.yml
   lint:
-    uses: ./.github/workflows/code-style.yml@main
+    uses: ./.github/workflows/code-style.yml
 
   release:
     runs-on: ubuntu-latest
