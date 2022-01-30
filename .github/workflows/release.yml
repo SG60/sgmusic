@@ -11,6 +11,9 @@ on:
 jobs:
   test:
     uses: ./.github/workflows/tests.yml
+    secrets:
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
   lint:
     uses: ./.github/workflows/code-style.yml
 
