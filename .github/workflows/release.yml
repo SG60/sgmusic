@@ -9,9 +9,9 @@ on:
 
 jobs:
   test:
-    uses: sg60/sgmusic/.github/workflows/tests.yml@main
+    uses: ./.github/workflows/tests.yml@main
   lint:
-    uses: sg60/sgmusic/.github/workflows/code-style.yml@main
+    uses: ./.github/workflows/code-style.yml@main
 
   release:
     runs-on: ubuntu-latest
