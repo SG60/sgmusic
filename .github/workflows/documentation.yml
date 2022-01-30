@@ -1,0 +1,22 @@
+# Create documentation
+
+name: Documentation
+
+on:
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  documentation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - uses: SG60/setup-poetry@v1
+      - name: Update and deploy new documentation
+        run: |
+          poetry install
+          poetry run pip install mkdocs-material mkdocstrings
+          poetry run mkdocs gh-deploy --force
