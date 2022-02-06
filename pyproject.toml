@@ -11,7 +11,7 @@ python = ">=3.9,<4"
 sympy = "^1.9"
 
 [tool.poetry.dev-dependencies]
-pytest = "^6.2.5"
+pytest = "^7.0.0"
 mypy = "^0.931"
 hypothesis = {extras = ["cli"], version = "^6.36.1"}
 
