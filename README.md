@@ -15,4 +15,4 @@ Using poetry, mypy, isort, black.
 
 Pytest for testing.
 
-[commitizen](https://github.com/commitizen-tools/commitizen) for commit messages and semver (use cz c for commits, cz bump to update version)
+[commitizen](https://github.com/commitizen-tools/commitizen) for commit messages and semver (use `cz c` for commits, `cz bump` to update version, `git push --tags` to update tags on Github)
