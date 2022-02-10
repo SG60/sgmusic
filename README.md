@@ -14,3 +14,5 @@
 Using poetry, mypy, isort, black.
 
 Pytest for testing.
+
+[cz](https://github.com/commitizen-tools/commitizen) for commit messages and changelog
