@@ -74,7 +74,7 @@ test = ["flake8 (==3.7.8)", "hypothesis (==3.55.3)"]
 
 [[package]]
 name = "hypothesis"
-version = "6.36.1"
+version = "6.37.1"
 description = "A library for property-based testing"
 category = "dev"
 optional = false
@@ -293,7 +293,7 @@ python-versions = ">=3.6"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.9,<4"
-content-hash = "cbbffab2bc505884261802a984353ddf1827bf1ef5ecd8e220f398143e91cb1c"
+content-hash = "88260b001256897f71f0f1744da5f4bb7338d832c279c583ce7f2db0eedc5dc2"
 
 [metadata.files]
 atomicwrites = [
@@ -342,8 +342,8 @@ commonmark = [
     {file = "commonmark-0.9.1.tar.gz", hash = "sha256:452f9dc859be7f06631ddcb328b6919c67984aca654e5fefb3914d54691aed60"},
 ]
 hypothesis = [
-    {file = "hypothesis-6.36.1-py3-none-any.whl", hash = "sha256:886342c291e3e592f26889f25b33aac78c6af62c736451f7cdad0a06ffa27325"},
-    {file = "hypothesis-6.36.1.tar.gz", hash = "sha256:46cbee9d7aed822149af75ec63d5f86cd1042df69b2e8eae17b26a56a4dda781"},
+    {file = "hypothesis-6.37.1-py3-none-any.whl", hash = "sha256:c0098b3fedffd97636accf70d4bd45047e386ec67bac4587d3dc2a2e52f7d67d"},
+    {file = "hypothesis-6.37.1.tar.gz", hash = "sha256:cbc8bda86856987ca83fb429d0a65dcac9c503253384628b9f723084b9513c1b"},
 ]
 iniconfig = [
     {file = "iniconfig-1.1.1-py2.py3-none-any.whl", hash = "sha256:011e24c64b7f47f6ebd835bb12a743f2fbe9a26d4cecaa7f53bc4f35ee9da8b3"},
