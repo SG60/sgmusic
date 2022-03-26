@@ -12,7 +12,7 @@ sympy = "^1.10"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.1"
-mypy = "^0.941"
+mypy = "^0.942"
 hypothesis = {extras = ["cli"], version = "^6.36.1"}
 
 [tool.commitizen]
