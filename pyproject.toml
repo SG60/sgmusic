@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sgmusic"
-version = "0.1.4"
+version = "0.1.5"
 description = ""
 authors = ["Sam Greening <samjg60@gmail.com>"]
 readme = "README.md"
@@ -17,7 +17,7 @@ hypothesis = {extras = ["cli"], version = "^6.36.1"}
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-version = "0.1.4"
+version = "0.1.5"
 tag_format = "v$version"
 version_files = [
     "pyproject.toml:version"
