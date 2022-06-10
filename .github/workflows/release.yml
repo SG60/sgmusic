@@ -18,27 +18,14 @@ jobs:
 
   lint:
     uses: ./.github/workflows/code-style.yml
-
-  # release:
-  #   runs-on: ubuntu-latest
-  #   needs: [test, lint]
-  #   steps:
-  #     - name: Checkout
-  #       uses: actions/checkout@v2
-  #     - name: Create Github Release
-  #       uses: softprops/action-gh-release@v1
-
-  #     # - uses: actions/setup-python@v2
-  #     #   with:
-  #     #     python-version: 3.x
-  #     # - uses: SG60/setup-poetry@v1
-  #     # - name: Update and deploy new documentation
-  #     #   run: |
-  #     #     poetry install
-  #     #     poetry run pip install mkdocs-material mkdocstrings
-  #     #     poetry run mkdocs gh-deploy --force
-
-  documentation:
+    
+  python-publish:
+    uses: ./.github/workflows/python-publish.yml
+    secrets:
+      PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
     needs: [test, lint]
+ 
+  documentation:
+    needs: python-publish
     # needs: release
     uses: ./.github/workflows/documentation.yml
